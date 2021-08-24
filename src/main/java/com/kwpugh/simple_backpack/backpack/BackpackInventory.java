@@ -94,8 +94,8 @@ public class BackpackInventory implements Inventory, BackpackInventoryInterface
 
     public void fromTag(NbtCompound tag)
     {
-        this.inventory_width = tag.contains("inventory_width") ? tag.getInt("inventory_width") : 9;
-        this.inventory_height = tag.contains("inventory_height") ? tag.getInt("inventory_height") : 6;
+        this.inventory_width = tag.contains("inventory_width") ? tag.getInt("inventory_width") : 15;
+        this.inventory_height = tag.contains("inventory_height") ? tag.getInt("inventory_height") : 12;
 
         this.items = DefaultedList.ofSize(inventory_width * inventory_height, ItemStack.EMPTY);
         readItemsFromTag(this.items, tag);
